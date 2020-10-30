@@ -1,0 +1,225 @@
+// 主颜色
+$mainColor: #4D7496;
+
+// 顶部横条 开始
+.el-header {
+  // 顶部横条背景  
+  .el-menu {
+    background-color: $mainColor;
+    position: relative;
+    border-bottom: 3px solid #333;
+
+    // 头像 或者 退出登录的样式
+    .el-menu-item {
+      border-left: 1px solid #aaa;
+      text-shadow:5px 2px 6px #000;
+
+      &:hover {
+        background-color: #6F96B8;
+        color: #fff;
+      }
+    }
+
+    // 顶部横条 标题
+    .title {
+      color: #fff;
+      font-weight: 700;
+      text-shadow:5px 2px 6px #000;
+    }
+    
+    // 顶部横条选项样式
+    li {
+      color: #fff;
+    }
+  }
+}
+// 顶部横条 结束
+
+// 侧边栏样式 开始
+.index-aside {
+  background: #fff;
+  position: relative;
+  border-right: 5px solid #ccc;
+
+  .el-menu {
+    border-right: solid 1px #fff;
+    color: #555;
+
+    .el-menu-item {
+      background: #eee;
+      color: #555;
+
+      &:hover {
+        background-color: #eee;
+        color: #555;
+        border-left: 10px solid $mainColor;
+      }
+    }
+
+    .el-submenu {
+      background: #fff;
+      color: #555;
+      border-bottom: 1px solid #333;
+      overflow: hidden;
+
+      i {
+        color: #555;
+      }
+
+      // 侧边栏鼠标悬浮效果
+      .el-submenu__title:hover {
+        color: #555;
+        border-left: 10px solid $mainColor;
+
+        i {
+          color: #555;
+        }
+      }
+
+      .el-submenu__title {
+        color: #555;
+        border-bottom: 1px solid #aaa;
+      }
+    }
+  }
+}
+// 侧边栏样式 结束
+
+// 登录 开始
+.login-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ECECEC;
+
+  .login-form {
+    box-shadow: -15px 15px 15px rgba(6, 17, 47, 0.7);
+    opacity: 1;
+    top: 20px;
+    -webkit-transition-timing-function: cubic-bezier(0.68, -0.25, 0.265, 0.85);
+    -webkit-transition-property: -webkit-transform,opacity,box-shadow,top,left;
+            transition-property: transform,opacity,box-shadow,top,left;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transform-origin: 161px 100%;
+        -ms-transform-origin: 161px 100%;
+            transform-origin: 161px 100%;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    position: relative;
+    width: 290px;
+    /*border-top: 2px solid #D8312A;*/
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    padding: 80px 40px 40px 40px;
+    background: #35394a;
+    /* Old browsers */
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #35394a), color-stop(100%, rgb(0, 0, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(230deg, rgba(53, 57, 74, 0) 0%, rgb(0, 0, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    /* Opera 11.10+ */
+    /* IE10+ */
+    background: linear-gradient(230deg, rgba(53, 57, 74, 0) 0%, rgb(0, 0, 0) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(53, 57, 74, 0)', endColorstr='rgb(0, 0, 0)',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+
+    .el-form-item {
+      padding: 0;
+    }
+
+    .el-form-item__label,
+    .el-radio {
+      color: #ccc;
+    }
+
+    h1 {
+      color: #D3D7F7;
+      height: 60px;
+      font-size: 23px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .el-input__inner {
+      background: transparent;
+      color: #61BFFF;
+      border-color: transparent;
+      
+      &:focus {
+        border-color: transparent;
+      }
+    }
+
+    .el-button--primary{
+      border-radius: 50px;
+      background: transparent;
+      border: 1px solid #00AFC1;
+    }
+    .el-button--primary:active {
+      border-radius: 50px;
+      background: transparent;
+      border-color: #00AFC1;
+      color: #fff;
+      outline: none;
+    }
+    .el-button--primary:hover, .el-button--primary:focus {
+      border-radius: 50px;
+      background: transparent;
+      border-color: #00AFC1;
+      color: #fff;
+    }
+    .el-radio__input.is-checked + .el-radio__label {
+     color: #61BFFF;
+     font-weight: bold;
+     font-size: 18px;
+    }
+    .el-radio__input.is-checked .el-radio__inner {
+      border-color: #61BFFF;
+      background: #61BFFF;
+    }
+    .btn-login {
+      margin-top: 0;
+    }
+  }
+}
+// 登录 结束
+
+// 按钮 开始
+.el-button--primary{
+  background: linear-gradient(to bottom,#0BB997,#00AFC1);
+  border: 1px solid #00AFC1;
+}
+.el-button--primary:active {
+  background: linear-gradient(to bottom,#0BB997,#00AFC1);
+  border-color: #00AFC1;
+  color: #fff;
+  outline: none;
+}
+.el-button--primary:hover, .el-button--primary:focus {
+  background: linear-gradient(to bottom,#0BB997,#00AFC1);
+  border-color: #00AFC1;
+  color: #fff;
+}
+// 按钮 结束
+
+// 主体 开始
+.el-main {
+  // 总体样式
+  .router-view {
+    padding: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+    padding-left: 20px !important;
+  }
+}
+// 主体 结束
